@@ -7,15 +7,27 @@ import Home from "./pages/Home";
 import Casas from "./pages/Casas";
 import Personajes from "./pages/Personajes";
 import MainLayout from "./layouts/MainLayout";
+import { useSelector } from "react-redux";
 
 function App() {
+
+  const role = useSelector((store) => store.userReducer.user.role)
+
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
+
+
             <Route index element={<Home />}></Route>
-            <Route path="/personajes" element={<Personajes />}></Route>
+            <Route path="/personajes" element={
+                
+              <Personajes />
+
+
+            }></Route>
             <Route path="/casas" element={<Casas />}></Route>
           </Route>
         </Routes>

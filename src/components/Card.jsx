@@ -9,7 +9,7 @@ function Card(props) {
     
 
   return (
-    <div className="card">
+    <div className="card" key={props.id}>
       <h2>{props.titulo}</h2>
       <p>{props.contenido}</p>
       <button onClick={()=> handlerAlert()}>{props.cta}</button>
