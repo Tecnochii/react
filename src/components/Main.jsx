@@ -7,7 +7,7 @@ import {
   filterPersonajesPerName,
   loadPersonajes,
 } from "../redux/actions/personajesAction";
-import { loadUser } from "../redux/actions/userAction";
+import { loadUser, login } from "../redux/actions/userAction";
 
 function Main() {
   const [arrayCards, setArrayCards] = useState([
@@ -19,9 +19,7 @@ function Main() {
 
   // const [arrayPersonajes, setArrayPersonajes] = useState([])
 
-  let arrayPersonajes = useSelector(
-    (store) => store.personajesReducer.personajes
-  );
+  let arrayPersonajes = useSelector((store) => store.personajesReducer.personajes);
 
   const dispatch = useDispatch();
 
@@ -124,7 +122,7 @@ function Main() {
           <input type="text" />
         </label>
 
-        <button>Login</button>
+        <button onClick={() => dispatch(login({email: "", password: ""}))} >Login</button>
       </div>
 
       {role == "ADMIN" && (
