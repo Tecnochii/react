@@ -37,6 +37,10 @@ function Main() {
     console.log("Se añadio una Card");
   };
 
+
+ 
+
+
   const solicitarDatosDePersonajes = () => {
     let arrAuxPersonajes = [
       {
@@ -98,7 +102,7 @@ function Main() {
       solicitarDatosDePersonajes();
     }
 
-    dispatch(loadUser());
+    // dispatch(loadUser());
   }, []);
 
   //  useEffect(()=>{
