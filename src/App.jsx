@@ -1,13 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Main from "./components/main";
+
 import Home from "./pages/Home";
 import Casas from "./pages/Casas";
 import Personajes from "./pages/Personajes";
 import MainLayout from "./layouts/MainLayout";
-import { useSelector } from "react-redux";
+
 
 function App() {
 
